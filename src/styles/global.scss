@@ -1,0 +1,59 @@
+@import './palette';
+@import './spaces';
+@import './fontsizes';
+
+* {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  border: none;
+  outline: none;
+}
+
+h1 {
+  font-size: var(--fontsize__h1);
+}
+
+h2 {
+  font-size: var(--fontsize__h2);
+}
+
+h3 {
+  font-size: var(--fontsize__h3);
+}
+
+h4 {
+  font-size: var(--fontsize__h4);
+}
+
+h5 {
+  font-size: var(--fontsize__h5);
+}
+
+h6 {
+  font-size: var(--fontsize__h6);
+}
+
+button {
+  font-size: var(--fontsize__button);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+body,
+main,
+section {
+  min-height: 100vh;
+}

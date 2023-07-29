@@ -1,0 +1,121 @@
+@import '../../styles/mixins';
+
+.container {
+  position: absolute;
+  top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 4px;
+  width: 400px;
+  padding: var(--space__bravo);
+
+  visibility: hidden;
+  opacity: 0;
+
+  p,
+  svg {
+    color: var(--white);
+    font-size: var(--fontsize__button);
+    font-weight: 700;
+  }
+
+  svg {
+    font-size: var(--fontsize__h6);
+  }
+}
+
+.container.open {
+  animation: linear;
+  animation-name: fade-in;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+}
+
+.container.success {
+  background-color: var(--success);
+}
+
+.container.error {
+  background-color: var(--error);
+}
+
+@include responsiviness(tablet) {
+  .container {
+    width: 100%;
+  }
+
+  .container.open {
+    animation-name: fade-in-tablet;
+  }
+}
+
+@keyframes fade-in-tablet {
+  0% {
+    right: -100%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  25% {
+    right: 0%;
+    opacity: 1;
+  }
+
+  50% {
+    right: 0%;
+    opacity: 1;
+  }
+
+  75% {
+    right: 0%;
+    opacity: 1;
+  }
+
+  85% {
+    right: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    right: -100%;
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    right: -100%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  25% {
+    right: 10%;
+    opacity: 1;
+  }
+
+  50% {
+    right: 10%;
+    opacity: 1;
+  }
+
+  75% {
+    right: 10%;
+    opacity: 1;
+  }
+
+  85% {
+    right: 10%;
+    opacity: 1;
+  }
+
+  100% {
+    right: -100%;
+    opacity: 1;
+    visibility: hidden;
+  }
+}

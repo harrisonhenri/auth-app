@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import { Routes } from '@routes/routes'
+import { persistor, store } from '@store/store'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-      <p >
-Hello world      </p>
-    </>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Routes />
+      </PersistGate>
+    </Provider>
   )
 }
 
