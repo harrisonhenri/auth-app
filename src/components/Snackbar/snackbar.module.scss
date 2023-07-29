@@ -2,14 +2,14 @@
 
 .container {
   position: absolute;
-  top: 20px;
+  top: 3rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-radius: 4px;
-  width: 400px;
+  border-radius: var(--borders__alpha);
+  width: 30%;
   padding: var(--space__bravo);
 
   visibility: hidden;
@@ -42,17 +42,17 @@
   background-color: var(--error);
 }
 
-@include responsiviness(tablet) {
+@include responsiviness(smartphone) {
   .container {
     width: 100%;
   }
 
   .container.open {
-    animation-name: fade-in-tablet;
+    animation-name: fade-in-smartphone;
   }
 }
 
-@keyframes fade-in-tablet {
+@keyframes fade-in-smartphone {
   0% {
     right: -100%;
     opacity: 1;

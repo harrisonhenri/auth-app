@@ -7,9 +7,9 @@ import { Button } from '@components/Button/button'
 import { useSignInMutation } from '@slices/auth/auth.api'
 import { formSchema } from './utils/form-schema/form-schema'
 import { hasFormErrors } from '@utils/form/has-form-errors/has-form-errors'
-import { ButtonText } from '@components/ButtonText/button-text'
 import { useState } from 'react'
 import { SnackBar } from '@components/Snackbar/snackbar'
+import { ButtonContent } from '@components/ButtonContent/button-content'
 
 export const Auth = () => {
   const {
@@ -55,7 +55,7 @@ export const Auth = () => {
           loading={isSigning}
           data-testid="login-button"
         >
-          <ButtonText text="Entrar" icon />
+          <ButtonContent text="Entrar" icon />
         </Button>
         {isSnackBarOpen && (
           <SnackBar

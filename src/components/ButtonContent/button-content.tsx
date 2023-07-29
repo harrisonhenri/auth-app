@@ -1,4 +1,4 @@
-import styles from './button-text.module.scss'
+import styles from './button-content.module.scss'
 
 import { FiLogIn } from 'react-icons/fi'
 
@@ -7,9 +7,9 @@ interface Props {
   icon?: boolean
 }
 
-export const ButtonText = ({ text, icon }: Props) => {
+export const ButtonContent = ({ text, icon }: Props) => {
   return (
-    <div className={styles.button__text}>
+    <div className={styles.container}>
       <p>{text}</p>
       {icon && <FiLogIn />}
     </div>

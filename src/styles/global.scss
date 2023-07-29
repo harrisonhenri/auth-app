@@ -1,6 +1,7 @@
 @import './palette';
-@import './spaces';
-@import './fontsizes';
+@import './spacing';
+@import './typography';
+@import './mixins';
 
 * {
   font-family: Roboto, sans-serif;
@@ -56,4 +57,10 @@ body,
 main,
 section {
   min-height: 100vh;
+}
+
+@include responsiviness(smartphone) {
+  * {
+    font-size: 12px;
+  }
 }

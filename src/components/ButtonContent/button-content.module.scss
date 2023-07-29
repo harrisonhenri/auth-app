@@ -1,6 +1,4 @@
-@import '../../styles/mixins';
-
-.button__text {
+.container {
   display: flex;
   align-items: center;
 
@@ -13,13 +11,5 @@
   svg {
     margin-left: var(--space__alpha);
     font-size: var(--fontsize__h6);
-  }
-}
-
-@include responsiviness(tablet) {
-  .button__text {
-    p {
-      font-size: var(--fontsize__caption);
-    }
   }
 }

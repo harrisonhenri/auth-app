@@ -1,13 +1,11 @@
-@import '../../styles/mixins';
-
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
 
   border: 0;
-  border-radius: 7px;
-  min-height: 56px;
+  border-radius: var(--borders__bravo);
+  min-height: 4rem;
   padding: 0 var(--space__bravo);
 
   background-color: var(--secondary);
@@ -25,10 +23,4 @@
   }
 
   transition: min-height 400ms linear;
-}
-
-@include responsiviness(tablet) {
-  .button {
-    min-height: 48px;
-  }
 }

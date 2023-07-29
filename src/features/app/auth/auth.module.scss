@@ -1,5 +1,3 @@
-@import '../../../styles/palette';
-
 .container {
   display: flex;
   flex-direction: column;
@@ -10,9 +8,9 @@
     flex-direction: column;
     align-self: center;
 
-    margin-top: 200px;
-    border-radius: 8px;
-    max-width: 480px;
+    margin-top: var(--space__zulu);
+    border-radius: var(--borders__bravo);
+    max-width: 35rem;
     width: 100%;
     padding: var(--space__alpha);
 
