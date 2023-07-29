@@ -48,9 +48,22 @@ h6 {
 }
 
 button {
-  font-size: var(--fontsize__button);
-  text-transform: uppercase;
-  font-weight: 700;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  cursor: pointer;
+
+  background: transparent;
+
+  color: inherit;
+  font: inherit;
+
+  line-height: normal;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 }
 
 body,

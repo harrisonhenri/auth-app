@@ -8,8 +8,8 @@ import { useSignInMutation } from '@slices/auth/auth.api'
 import { formSchema } from './utils/form-schema/form-schema'
 import { hasFormErrors } from '@utils/form/has-form-errors/has-form-errors'
 import { useState } from 'react'
-import { SnackBar } from '@components/Snackbar/snackbar'
 import { ButtonContent } from '@components/ButtonContent/button-content'
+import { SnackBar } from '@components/Snackbar/snack-bar'
 
 export const Auth = () => {
   const {

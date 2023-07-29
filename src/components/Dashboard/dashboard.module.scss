@@ -1,0 +1,16 @@
+@import '../../styles/mixins';
+
+.container {
+  display: flex;
+
+  .content {
+    padding: var(--space__alpha);
+    width: 100%;
+  }
+}
+
+@include responsiviness(smartphone) {
+  .container {
+    flex-direction: column;
+  }
+}

@@ -1,4 +1,5 @@
 import { Auth } from '@app/auth/auth'
+import { Home } from '@app/home/home'
 
 export const Pages = [
   {
@@ -7,8 +8,8 @@ export const Pages = [
     Component: Auth,
   },
   {
-    path: '/',
+    path: '/home',
     isPrivate: false,
-    Component: () => <></>,
+    Component: Home,
   },
 ]

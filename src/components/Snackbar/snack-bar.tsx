@@ -1,4 +1,4 @@
-import styles from './snackbar.module.scss'
+import styles from './snack-bar.module.scss'
 import { getStyle } from './utils/get-style/get-style'
 import { HiEmojiSad, HiEmojiHappy } from 'react-icons/hi'
 
