@@ -36,7 +36,7 @@ const axiosBaseQuery: BaseQueryFn<
   } catch (axiosError) {
     const err = axiosError as AxiosError
 
-    // Esse trecho tem como objetivo simular algo que idealmente seria feito utilizando-se um refresh token.
+    // This snippet aims to simulate something that ideally would be done using a refresh token.
     if (isTokenExpired(token)) {
       try {
         const response = await api.post('auth/login', {

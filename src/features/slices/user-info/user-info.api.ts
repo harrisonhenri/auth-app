@@ -5,7 +5,7 @@ import { formatUserInfo } from '@utils/format/format-user-info/format-user-info'
 export const userInfo = baseApi.injectEndpoints({
   endpoints(builder) {
     return {
-      // Idealmente essa consulta seria desnecessária (o auth já poderia retornar todo o perfil do user) ou feita somente utilizando-se a sessão do usuário (sem o id).
+      // Ideally, this query wouldn't be necessary (auth could already return the entire user's profile) or done only using the user's session (without the id).
       getUserInfo: builder.query<
         IGetUserInfo.FormattedResponse,
         IGetUserInfo.Request
