@@ -2,7 +2,7 @@ import jwt, { JwtPayload } from 'jwt-decode'
 
 export const isTokenExpired = (token?: string | null) => {
   if (!token) {
-    return true
+    return false
   }
 
   const decoded: JwtPayload = jwt(token)

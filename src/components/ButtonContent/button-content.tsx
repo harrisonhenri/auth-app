@@ -11,7 +11,7 @@ export const ButtonContent = ({ text, icon }: Props) => {
   return (
     <div className={styles.container}>
       <p>{text}</p>
-      {icon && <FiLogIn />}
+      {icon && <FiLogIn data-testid="icon" />}
     </div>
   )
 }

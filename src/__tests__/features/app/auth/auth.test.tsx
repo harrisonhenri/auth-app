@@ -1,7 +1,7 @@
 import { Auth } from '@app/auth/auth'
 import { handlers } from '@tests/mocks/auth/handler'
 import { userData } from '@tests/mocks/data/user/user'
-import { fireEvent, render, waitFor } from '@tests/utils/sut'
+import { fireEvent, render, waitFor } from '@tests/test-utils/sut'
 import { setupServer } from 'msw/node'
 
 const server = setupServer(handlers[0])

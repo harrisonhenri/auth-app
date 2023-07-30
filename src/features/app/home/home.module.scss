@@ -1,0 +1,54 @@
+@import '../../../styles/mixins';
+
+.spinner--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  animation: linear;
+  animation-name: fade-in;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in;
+}
+
+.content__container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 'personal_info' 'physical_info' 'financial_info' 'job_info';
+
+  margin-top: var(--space__bravo);
+
+  .personal--info {
+    grid-area: personal_info;
+  }
+
+  .financial--info {
+    grid-area: financial_info;
+  }
+
+  .physical--info {
+    grid-area: physical_info;
+  }
+
+  .job--info {
+    grid-area: job_info;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@include responsiviness-up(desktop) {
+  .content__container {
+    grid-template-areas: 'personal_info financial_info' 'personal_info physical_info' 'job_info job_info';
+  }
+}

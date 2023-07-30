@@ -13,7 +13,8 @@ import {
 import { persistConfig, reducers, RootState } from '@store/store'
 import { RenderOptions, render } from '@testing-library/react'
 import { ReactElement } from 'react'
-import { baseApi } from '@services/http/api'
+import { baseApi } from '@services/http/axios'
+import { authApi } from '@slices/auth/auth.api'
 
 type CustomRenderOptions = {
   preloadedState?: PreloadedState<RootState>
@@ -30,7 +31,9 @@ const customRender = (ui: ReactElement, options?: CustomRenderOptions) => {
         serializableCheck: {
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
-      }).concat(baseApi.middleware)
+      })
+        .concat(baseApi.middleware)
+        .concat(authApi.middleware)
     },
   })
 

@@ -3,7 +3,7 @@
 
   margin-top: var(--space__charlie);
   border: 2px solid var(--disabled__light);
-  border-radius: var(--borders__bravo);
+  border-radius: var(--border__bravo);
   height: 4rem;
 
   &[data-status='untouched'] {
@@ -38,7 +38,7 @@
     border-color: var(--primary__light);
 
     label {
-      transform: scale(0.8) translate(-4px, -44px);
+      transform: scale(0.8) translate(-0.5rem, -3rem);
     }
   }
 
@@ -50,7 +50,7 @@
     background: transparent;
 
     &:not(:placeholder-shown) + label {
-      transform: scale(0.8) translate(-4px, -44px);
+      transform: scale(0.8) translate(-0.5rem, -3rem);
     }
   }
 

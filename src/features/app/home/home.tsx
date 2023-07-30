@@ -1,72 +1,79 @@
-import { Dashboard } from '@components/Dashboard/dashboard'
+import { GeneralInfo } from './components/GeneralInfo/general-info'
+import styles from './home.module.scss'
+import { CardInfo } from './components/CardInfo/card-info'
+import { useAppSelector } from '@store/store'
+import { userSelector } from '@slices/auth/auth.slice'
+import { useGetUserInfoQuery } from '@slices/user-info/user-info.api'
+import { Spinner } from '@components/Spinner/spinner'
+import { SnackBar } from '@components/Snackbar/snack-bar'
+import { parseErrorMessage } from '@utils/http/parse-error-message/parse-error-message'
 
 export const Home = () => {
-  // const user = {
-  //   id: 15,
-  //   firstName: 'Jeanne',
-  //   lastName: 'Halvorson',
-  //   maidenName: 'Cummerata',
-  //   age: 26,
-  //   gender: 'female',
-  //   email: 'kminchelle@qq.com',
-  //   phone: '+86 581 108 7855',
-  //   username: 'kminchelle',
-  //   password: '0lelplR',
-  //   birthDate: '1996-02-02',
-  //   image: 'https://robohash.org/autquiaut.png',
-  //   bloodGroup: 'A+',
-  //   height: 176,
-  //   weight: 45.7,
-  //   eyeColor: 'Amber',
-  //   hair: {
-  //     color: 'Blond',
-  //     type: 'Straight',
-  //   },
-  //   domain: 'google.co.uk',
-  //   ip: '78.43.74.226',
-  //   address: {
-  //     address: '4 Old Colony Way',
-  //     city: 'Yarmouth',
-  //     coordinates: {
-  //       lat: 41.697168,
-  //       lng: -70.189992,
-  //     },
-  //     postalCode: '02664',
-  //     state: 'MA',
-  //   },
-  //   macAddress: 'D9:DB:D9:5A:01:09',
-  //   university: 'Donghua University, Shanghai',
-  //   bank: {
-  //     cardExpire: '10/23',
-  //     cardNumber: '3588859507772914',
-  //     cardType: 'jcb',
-  //     currency: 'Yuan Renminbi',
-  //     iban: 'FO12 1440 0396 8902 56',
-  //   },
-  //   company: {
-  //     address: {
-  //       address: '22572 Toreador Drive',
-  //       city: 'Salinas',
-  //       coordinates: {
-  //         lat: 36.602449,
-  //         lng: -121.699071,
-  //       },
-  //       postalCode: '93908',
-  //       state: 'CA',
-  //     },
-  //     department: 'Marketing',
-  //     name: 'Hahn-MacGyver',
-  //     title: 'Software Test Engineer IV',
-  //   },
-  //   ein: '62-0561095',
-  //   ssn: '855-43-8639',
-  //   userAgent:
-  //     'Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.14 Safari/534.24',
-  // }
+  const { id } = useAppSelector(userSelector)
+  const {
+    data: user,
+    isLoading: isGettingUserInfo,
+    error: gettingUserInfoError,
+  } = useGetUserInfoQuery({
+    id,
+  })
+
+  if (isGettingUserInfo)
+    return (
+      <div className={styles['spinner--container']}>
+        <Spinner variation="secondary" />
+      </div>
+    )
 
   return (
-    <Dashboard>
+    <>
       <h4>Home</h4>
-    </Dashboard>
+      {user && (
+        <div className={user ? styles.container : ''}>
+          <GeneralInfo
+            image={user.image}
+            fullName={user.fullName}
+            maidenName={user.maidenName}
+          />
+          <div className={styles.content__container}>
+            <div className={styles['personal--info']}>
+              <CardInfo
+                iconName="user"
+                data={user.personalInfo}
+                title="Informações pessoais"
+              />
+            </div>
+            <div className={styles['financial--info']}>
+              <CardInfo
+                iconName="wallet"
+                data={user.financialInfo}
+                title="Informações financeiras"
+              />
+            </div>
+            <div className={styles['physical--info']}>
+              <CardInfo
+                iconName="health"
+                data={user.physicalInfo}
+                title="Características físicas"
+              />
+            </div>
+            <div className={styles['job--info']}>
+              <CardInfo
+                iconName="job"
+                data={user.jobInfo}
+                title="Informações de trabalho"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+      {gettingUserInfoError && (
+        <SnackBar
+          type="error"
+          text={parseErrorMessage(gettingUserInfoError)}
+          open={Boolean(gettingUserInfoError)}
+        />
+      )}
+    </>
   )
 }

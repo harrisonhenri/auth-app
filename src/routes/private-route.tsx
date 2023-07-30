@@ -1,3 +1,4 @@
+import { Dashboard } from '@components/Dashboard/dashboard'
 import { RouteProps as ReactDOMRouteProps, Navigate } from 'react-router-dom'
 
 type RouteProps = ReactDOMRouteProps & {
@@ -12,7 +13,9 @@ export const PrivateRoute = ({
   ...rest
 }: RouteProps) => {
   return isLogged ? (
-    <Component {...rest} />
+    <Dashboard>
+      <Component {...rest} />
+    </Dashboard>
   ) : (
     <Navigate
       to={{

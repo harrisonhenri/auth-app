@@ -3,20 +3,21 @@
 nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 240px;
+
+  width: 18rem;
   min-height: 100vh;
+  padding: var(--space__bravo);
+
   background-color: var(--secondary);
-  padding: 2rem 1rem 1rem;
 
   button {
-    margin-top: 4rem;
     display: flex;
     align-items: center;
-    text-decoration: none;
-    padding: 10px 1rem;
-    border-radius: 5px;
-    margin-bottom: 5px;
+
+    margin-top: 4rem;
+    padding: var(--space__alpha) 1rem;
+
+    border-radius: var(--border__alpha);
 
     &:hover {
       background-color: var(--secondary__dark);
@@ -49,19 +50,20 @@ nav {
 .burger {
   color: var(--secondary);
   width: 100%;
-  height: 40px;
+  height: 3rem;
   display: none;
 
   svg {
-    color: var(--secondary);
-    background: transparent;
     outline: none;
+    margin: 0 var(--space__alpha);
     border: none;
-    margin: 0 10px;
+
+    background: transparent;
+    color: var(--secondary);
   }
 }
 
-@include responsiviness(smartphone) {
+@include responsiviness-down(desktop) {
   .burger {
     display: flex;
     align-items: center;
@@ -69,7 +71,7 @@ nav {
 
   nav {
     width: 30%;
-    min-width: 200px;
+    min-width: 10rem;
 
     &[data-status='hide'] {
       position: absolute;
@@ -79,8 +81,8 @@ nav {
     }
 
     &[data-status='show'] {
-      display: flex;
       position: absolute;
+      display: flex;
 
       animation: linear;
       animation-name: fade-in;

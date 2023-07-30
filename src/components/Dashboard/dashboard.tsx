@@ -19,7 +19,7 @@ export const Dashboard = ({ children }: Props) => {
         visible={isNavBarVisible}
         toogleVisibility={toogleNavBarVisible}
       />
-      <div className={styles.content}>{children}</div>
+      <section className={styles.content}>{children}</section>
     </section>
   )
 }

@@ -1,14 +1,14 @@
 @import '../../styles/mixins';
 
 .container {
-  position: absolute;
+  position: fixed;
   top: 3rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-radius: var(--borders__alpha);
+  border-radius: var(--border__alpha);
   width: 30%;
   padding: var(--space__bravo);
 
@@ -42,7 +42,7 @@
   background-color: var(--error);
 }
 
-@include responsiviness(smartphone) {
+@include responsiviness-down(smartphone) {
   .container {
     width: 100%;
   }

@@ -5,7 +5,6 @@
 
 * {
   font-family: Roboto, sans-serif;
-  font-size: 14px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -72,8 +71,26 @@ section {
   min-height: 100vh;
 }
 
-@include responsiviness(smartphone) {
+@include responsiviness-up(xm) {
+  * {
+    font-size: 10px;
+  }
+}
+
+@include responsiviness-up(smartphone) {
+  * {
+    font-size: 10px;
+  }
+}
+
+@include responsiviness-up(tablet) {
   * {
     font-size: 12px;
+  }
+}
+
+@include responsiviness-up(desktop) {
+  * {
+    font-size: 14px;
   }
 }

@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { Button } from '@components/Button/button'
 import { useSignInMutation } from '@slices/auth/auth.api'
 import { formSchema } from './utils/form-schema/form-schema'
-import { hasFormErrors } from '@utils/form/has-form-errors/has-form-errors'
+import { formHasErrors } from '@utils/form/form-has-errors/form-has-errors'
 import { useState } from 'react'
 import { ButtonContent } from '@components/ButtonContent/button-content'
 import { SnackBar } from '@components/Snackbar/snack-bar'
@@ -28,6 +28,7 @@ export const Auth = () => {
   const [signIn, { isLoading: isSigning }] = useSignInMutation()
 
   async function onSubmit({ username, password }: IAuth.Request) {
+    setIsSnackBarOpen(false)
     await signIn({ username, password }).unwrap().catch(openSnackBar)
   }
 
@@ -51,7 +52,7 @@ export const Auth = () => {
         />
         <Button
           type="submit"
-          disabled={hasFormErrors(errors)}
+          disabled={formHasErrors(errors)}
           loading={isSigning}
           data-testid="login-button"
         >
@@ -59,7 +60,6 @@ export const Auth = () => {
         </Button>
         {isSnackBarOpen && (
           <SnackBar
-            id="error-snackbar"
             type="error"
             text="Verifique suas credenciais!"
             open={isSnackBarOpen}

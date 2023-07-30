@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 import { PrivateRoute } from './private-route'
-import { Pages } from './routes.model'
+import { pages } from './routes.model'
 import { useAppSelector } from '@store/store'
 import { userSelector } from '@slices/auth/auth.slice'
 
@@ -17,7 +17,7 @@ export const Routes = () => {
     <BrowserRouter>
       <Switch>
         {user && <Route path="/" element={<Navigate to="/home" />} />}
-        {Pages.map(({ isPrivate, path, Component }, idx) =>
+        {pages.map(({ isPrivate, path, Component }, idx) =>
           !isPrivate ? (
             <Route key={idx} path={path} element={<Component />} />
           ) : (

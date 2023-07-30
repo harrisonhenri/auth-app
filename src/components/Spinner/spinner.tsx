@@ -1,8 +1,20 @@
 import styles from './spinner.module.scss'
 
-export const Spinner = () => {
+interface Props {
+  variation?: 'secondary' | 'white'
+}
+
+export const Spinner = ({ variation = 'white' }: Props) => {
+  const classVariation =
+    variation === 'secondary'
+      ? styles['container--secondary']
+      : styles['container--white']
+
   return (
-    <div data-testid="spinner" className={styles.container}>
+    <div
+      data-testid="spinner"
+      className={`${styles.container} ${classVariation}`}
+    >
       <div></div>
       <div></div>
       <div></div>

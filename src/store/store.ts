@@ -1,6 +1,7 @@
 import { COMMON } from '@config/common'
 import { combineReducers, configureStore, Reducer } from '@reduxjs/toolkit'
-import { baseApi } from '@services/http/api'
+import { baseApi } from '@services/http/axios'
+import { authApi } from '@slices/auth/auth.api'
 import { authSlice } from '@slices/auth/auth.slice'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import {
@@ -19,6 +20,7 @@ export type IAppDispatch = typeof store.dispatch
 
 export const reducers = combineReducers({
   [baseApi.reducerPath]: baseApi.reducer,
+  [authApi.reducerPath]: authApi.reducer,
   authSlice: authSlice.reducer,
 })
 
@@ -45,7 +47,9 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(baseApi.middleware)
+    })
+      .concat(baseApi.middleware)
+      .concat(authApi.middleware)
   },
 })
 

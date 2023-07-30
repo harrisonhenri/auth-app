@@ -7,6 +7,18 @@
   height: 2.5rem;
 }
 
+.container--white div {
+  border: 4px solid var(--white);
+
+  border-color: var(--white) transparent transparent transparent;
+}
+
+.container--secondary div {
+  border: 4px solid var(--secondary__dark);
+
+  border-color: var(--secondary__dark) transparent transparent transparent;
+}
+
 .container div {
   position: absolute;
 
@@ -14,9 +26,7 @@
 
   animation: container 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 
-  border: 4px solid var(--white);
   border-radius: 50%;
-  border-color: var(--white) transparent transparent transparent;
   width: 100%;
   height: 100%;
 }

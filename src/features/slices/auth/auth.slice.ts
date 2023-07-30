@@ -7,7 +7,7 @@ import { authApi } from './auth.api'
 const initialState = {} as IAuth.State
 
 export const authSlice = createSlice({
-  name: 'accountsSlice',
+  name: 'authSlice',
   initialState,
   reducers: {
     signOut() {

@@ -25,7 +25,9 @@ export const Input = forwardRef<HTMLInputElement, Props>(
         <label data-testid={`${props.name}-label`} title={errorMessage}>
           {props.placeholder}
         </label>
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage && (
+          <p data-testid={`${props.name}-error`}>{errorMessage}</p>
+        )}
       </div>
     )
   },

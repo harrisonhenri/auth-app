@@ -8,9 +8,13 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: 'jsdom',
-    setupFiles: ['./src/__tests__/utils/setup.ts'],
+    setupFiles: ['./src/__tests__/test-utils/setup.ts'],
     coverage: {
       provider: 'v8',
+      branches: 92,
+      lines: 92,
+      functions: 92,
+      statements: 92,
     },
     globals: true,
   },
@@ -27,6 +31,11 @@ export default defineConfig({
       '@models': path.join(__dirname, 'src/models'),
       '@theme': path.join(__dirname, 'src/theme'),
       '@utils': path.join(__dirname, 'src/utils'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      external: new RegExp('/__tests__/*'),
     },
   },
 })

@@ -6,19 +6,22 @@ interface Props {
   open?: boolean
   text: string
   type: 'success' | 'error'
-  id: string
 }
 
-export const SnackBar = ({ id, open, text, type }: Props) => {
+export const SnackBar = ({ open, text, type }: Props) => {
   const { openClass, variantClass } = getStyle(type, open)
 
   return (
     <div
-      data-testid={id}
+      data-testid={`${type}-snackbar`}
       className={`${styles.container} ${styles[openClass]} ${styles[variantClass]}`}
     >
       <p>{text}</p>
-      {type === 'success' ? <HiEmojiHappy /> : <HiEmojiSad />}
+      {type === 'success' ? (
+        <HiEmojiHappy data-testid="success-icon" />
+      ) : (
+        <HiEmojiSad data-testid="error-icon" />
+      )}
     </div>
   )
 }

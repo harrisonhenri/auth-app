@@ -55,21 +55,8 @@ interface Bank {
 }
 
 interface Company {
-  address: CompanyAddress
+  address: Address
   department: string
   name: string
   title: string
-}
-
-interface CompanyAddress {
-  address: string
-  city: string
-  coordinates: Coordinates2
-  postalCode: string
-  state: string
-}
-
-interface Coordinates2 {
-  lat: number
-  lng: number
 }

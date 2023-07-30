@@ -7,9 +7,9 @@
     "start": "vite",
     "build": "tsc && vite build",
     "test": "vitest",
-    "test-coverage": "vitest run --coverage",
+    "test:coverage": "vitest run --coverage",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier src && stylelint './src/**/*.scss'",
-    "lint-fix": "eslint . --ext ts,tsx --report-unused-disable-directives --fix && stylelint './src/**/*.scss' --fix",
+    "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --fix && stylelint './src/**/*.scss' --fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -46,7 +46,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "git-commit-msg-linter": "^5.0.4",
+    "husky": "^4.3.0",
     "jsdom": "^22.1.0",
+    "lint-staged": "^10.4.0",
     "msw": "^1.2.3",
     "path": "^0.12.7",
     "prettier": "^3.0.0",
@@ -55,8 +57,6 @@
     "stylelint-prettier": "^4.0.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.0",
     "whatwg-fetch": "^3.6.17"
   }
 }

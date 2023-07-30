@@ -1,15 +1,18 @@
-import { baseApi } from '@services/http/api'
+import { baseQuery } from '@services/http/api'
 import { IAuth } from './auth.model'
+import { createApi } from '@reduxjs/toolkit/query/react'
 
-export const authApi = baseApi.injectEndpoints({
+export const authApi = createApi({
+  reducerPath: 'auth',
+  baseQuery: baseQuery(),
   endpoints(builder) {
     return {
       signIn: builder.mutation<IAuth.FormattedResponse, IAuth.Request>({
-        query: data => {
+        query: body => {
           return {
             url: 'auth/login',
             method: 'POST',
-            data,
+            body,
           }
         },
         transformResponse: ({ token, ...rest }: IAuth.Response) => {
