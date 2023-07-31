@@ -11,8 +11,6 @@ workflows:
     jobs:
       - cypress/run:
           package-manager: yarn
-          executor: with-chrome
-          browser: chrome
           post-steps:
             - run: ls
             - store_test_results:
