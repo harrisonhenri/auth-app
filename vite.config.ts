@@ -10,7 +10,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/__tests__/test-utils/setup.ts'],
     coverage: {
-      provider: 'v8',
+      provider: 'istanbul',
       branches: 92,
       lines: 92,
       functions: 92,
@@ -21,6 +21,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@tests': path.join(__dirname, 'src/__tests__'),
+      '@assets': path.join(__dirname, 'src/assets'),
       '@components': path.join(__dirname, 'src/components'),
       '@config': path.join(__dirname, 'src/config'),
       '@store': path.join(__dirname, 'src/store'),

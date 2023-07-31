@@ -25,7 +25,11 @@ export const Navbar = ({ visible, toogleVisibility }: Props) => {
 
   return (
     <>
-      <button className={styles.burger} onClick={() => toogleVisibility()}>
+      <button
+        data-testid="burguer-menu"
+        className={styles.burger}
+        onClick={() => toogleVisibility()}
+      >
         <FaBars size={24} />
       </button>
       <nav data-status={visible ? 'show' : 'hide'}>
@@ -43,7 +47,7 @@ export const Navbar = ({ visible, toogleVisibility }: Props) => {
             </button>
           ))}
 
-        <button onClick={handleLogout}>
+        <button data-testid="sign-out-button" onClick={handleLogout}>
           <FaSignOutAlt />
           <span>Sair</span>
         </button>

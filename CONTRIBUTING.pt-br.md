@@ -27,8 +27,8 @@ Os arquivos devem ser nomeados usando o padrão kebab case.
 
 Esse projeto foi construído utilizando-se o [dummy json](https://dummyjson.com/) como backend seguindo as hipóteses abaixo:
 
-- Esta API não possui um refreshToken (e parece que o token não é validado), então, [esse snippet](https://github.com/harrisonhenri/auth-app/blob/master/src/services/http/axios.ts#L39) tenta simular esse fluxo
-- Parece que esta api não retorna os dados dos usuários com base no token, portanto, o aplicativo obtém os dados do usuário com uma solicitação get http usando o id como parâmetro de rota [como apresentado aqui](https://github.com/harrisonhenri/auth-app/blob/master/src/features/slices/user-info/user-info.api.ts#L8). Idealmente, essa consulta não seria necessária (auth já poderia retornar todo o perfil do usuário no login) ou feita apenas usando a sessão do usuário (sem o id).
+- Esta API não possui um refreshToken (e aparentemente que o token não é validado), então, [esse snippet](https://github.com/harrisonhenri/auth-app/blob/master/src/services/http/axios.ts#L39) tenta simular esse fluxo
+- Aparentemente esta api não retorna os dados dos usuários com base no token, portanto, o aplicativo obtém os dados do usuário com uma solicitação get http usando o id como parâmetro de rota [conforme apresentado aqui](https://github.com/harrisonhenri/auth-app/blob/master/src/features/slices/user-info/user-info.api.ts#L8). Idealmente, essa consulta não seria necessária (a api já poderia retornar todo o perfil do usuário no login) ou feita apenas usando a sessão do usuário (sem o id).
 
 ### Git patterns
 
