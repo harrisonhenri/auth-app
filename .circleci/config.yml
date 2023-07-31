@@ -14,9 +14,8 @@ jobs:
           command: yarn install --frozen-lockfile
       - run:
           name: Starting server
-          run:
-            command: npm start
-            background: true
+          command: yarn start
+          background: true
       - run:
           name: Running Cypress
           command: yarn cypress:run
