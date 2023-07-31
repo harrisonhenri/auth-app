@@ -21,4 +21,4 @@ jobs:
           command: ./node_modules/.bin/wait-on http://localhost:5173
       - run:
           name: Running Cypress
-          command: yarn
+          command: yarn cypress:run
