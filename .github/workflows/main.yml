@@ -13,5 +13,4 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           headless: false
-          headed: true
           start: yarn start
