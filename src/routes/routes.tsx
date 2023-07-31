@@ -30,6 +30,7 @@ export const Routes = () => {
             />
           ),
         )}
+        <Route path="*" element={<Navigate to="/404" />} />
       </Switch>
     </BrowserRouter>
   )

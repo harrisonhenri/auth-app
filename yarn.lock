@@ -226,7 +226,7 @@
 
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
-  resolved "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
+  resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@colors/colors@1.5.0":
@@ -934,7 +934,7 @@
 
 "@vitest/coverage-v8@^0.33.0":
   version "0.33.0"
-  resolved "https://registry.npmjs.org/@vitest/coverage-v8/-/coverage-v8-0.33.0.tgz"
+  resolved "https://registry.yarnpkg.com/@vitest/coverage-v8/-/coverage-v8-0.33.0.tgz#dfcb36cf51624a89d33ab0962a6eec8a41346ef2"
   integrity sha512-Rj5IzoLF7FLj6yR7TmqsfRDSeaFki6NAJ/cQexqhbWkHEV2htlVGrmuOde3xzvFsCbLCagf4omhcIaVmfU8Okg==
   dependencies:
     "@ampproject/remapping" "^2.2.1"
@@ -3619,6 +3619,18 @@ loose-envify@^1.1.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-react@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/lottie-react/-/lottie-react-2.4.0.tgz#f7249eee2b1deee70457a2d142194fdf2456e4bd"
+  integrity sha512-pDJGj+AQlnlyHvOHFK7vLdsDcvbuqvwPZdMlJ360wrzGFurXeKPr8SiRCjLf3LrNYKANQtSsh5dz9UYQHuqx4w==
+  dependencies:
+    lottie-web "^5.10.2"
+
+lottie-web@^5.10.2:
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.12.2.tgz#579ca9fe6d3fd9e352571edd3c0be162492f68e5"
+  integrity sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==
+
 loupe@^2.3.1, loupe@^2.3.6:
   version "2.3.6"
   resolved "https://registry.npmjs.org/loupe/-/loupe-2.3.6.tgz"
@@ -5337,7 +5349,7 @@ uuid@^8.3.2:
 
 v8-to-istanbul@^9.1.0:
   version "9.1.0"
-  resolved "https://registry.npmjs.org/v8-to-istanbul/-/v8-to-istanbul-9.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/v8-to-istanbul/-/v8-to-istanbul-9.1.0.tgz#1b83ed4e397f58c85c266a570fc2558b5feb9265"
   integrity sha512-6z3GW9x8G1gd+JIIgQQQxXuiJtCXeAjp6RaPEPLv62mH3iPHPxV6W3robxtCzNErRo6ZwTmzWhsbNvjyEBKzKA==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.12"
