@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@3
+  cypress: cypress/base:8.9.3-npm-6.10.1
 workflows:
   build:
     jobs:
