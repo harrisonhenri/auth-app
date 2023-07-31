@@ -21,4 +21,4 @@ jobs:
           command: timeout 100 bash -c 'while [ $(curl -s -o /dev/null -w %{http_code} localhost:5173) != "200" ]; do sleep 15; done' || false
       - run:
           name: Running Cypress
-          command: DEBUG=cypress:* yarn cypress:open
+          command: DEBUG=cypress:* yarn cypress:run
