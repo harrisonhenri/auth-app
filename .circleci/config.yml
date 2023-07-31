@@ -9,7 +9,8 @@ executors:
 workflows:
   build:
     jobs:
-      - cypress/install
+      - cypress/install:
+          package-manager: yarn
       - cypress/run:
           requires:
             - cypress/install
