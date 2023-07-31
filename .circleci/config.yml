@@ -11,8 +11,6 @@ workflows:
     jobs:
       - cypress/run:
           package-manager: yarn
-          requires:
-            - cypress/install
           executor: with-chrome
           browser: chrome
           post-steps:
