@@ -12,6 +12,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          browser: electron
+          browser: chrome
           headed: true
           start: yarn start
