@@ -10,7 +10,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/__tests__/test-utils/setup.ts'],
     coverage: {
-      provider: 'istanbul',
+      provider: 'v8',
       branches: 92,
       lines: 92,
       functions: 92,
