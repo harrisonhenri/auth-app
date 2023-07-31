@@ -3,7 +3,7 @@ name: Integration Tests
 on: push
 
 jobs:
-  run:
+  integration_tests:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
