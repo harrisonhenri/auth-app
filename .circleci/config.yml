@@ -5,4 +5,5 @@ workflows:
   build:
     jobs:
       - cypress/run:
+          package-manager: yarn
           start-command: 'npm run start'
