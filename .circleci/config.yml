@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@1
+  cypress: cypress-io/cypress@3
 executors:
   with-chrome:
     resource_class: large
@@ -9,9 +9,8 @@ executors:
 workflows:
   build:
     jobs:
-      - cypress/install:
-          package-manager: yarn
       - cypress/run:
+          package-manager: yarn
           requires:
             - cypress/install
           executor: with-chrome
