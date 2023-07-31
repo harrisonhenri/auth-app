@@ -18,4 +18,4 @@ jobs:
           background: true
       - run:
           name: Running Cypress
-          command: yarn cypress run --headed --browser firefox
+          command: yarn cypress run --browser firefox
