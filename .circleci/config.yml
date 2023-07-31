@@ -14,8 +14,12 @@ jobs:
           command: yarn install --frozen-lockfile
       - run:
           name: Starting server
-          command: yarn start
+          command: yarn start && ./node_modules/.bin/wait-on http://localhost:3000
+
           background: true
       - run:
+          name: Wait
+          command: ./node_modules/.bin/wait-on http://localhost:3000
+      - run:
           name: Running Cypress
-          command: xvfb-run yarn cypress run --headed --browser chrome
+          command: yarn
