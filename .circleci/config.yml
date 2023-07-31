@@ -1,10 +1,17 @@
 version: 2.1
-orbs:
-  cypress: cypress/base:8.9.3-npm-6.10.1
-workflows:
+
+jobs:
   build:
-    jobs:
-      - cypress/run:
-          package-manager: yarn
-          start-command: 'yarn start'
-          cypress-command: 'yarn cypress run --headed --browser chrome'
+    docker:
+      - image: cypress/base:8.9.3-npm-6.10.1
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
+    steps:
+      - checkout
+      - run:
+          name: Installing dependencies
+          command: yarn install --frozen-lockfile
+      - run:
+          name: Running E2E tests with multiple reporters
+          command: yarn cypress:run
