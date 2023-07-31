@@ -15,8 +15,7 @@
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --fix && stylelint './src/**/*.scss' --fix",
     "preview": "vite preview",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "cypress:ci": "yarn start & wait-on http-get://localhost:5173 && cypress run"
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.1",

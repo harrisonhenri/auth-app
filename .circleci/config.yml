@@ -6,4 +6,6 @@ workflows:
     jobs:
       - cypress/run:
           package-manager: yarn
-          cypress-command: yarn cypress:ci
+          start-command: yarn start
+          wait-on: http://localhost:5173
+          cypress-command: yarn cypress:run
