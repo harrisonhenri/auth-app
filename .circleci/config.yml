@@ -13,5 +13,8 @@ jobs:
           name: Installing dependencies
           command: yarn install --frozen-lockfile
       - run:
-          name: Running E2E tests with multiple reporters
-          command: yarn start && yarn cypress:run
+          name: Starting server
+          command: yarn start
+      - run:
+          name: Running Cypress
+          command: yarn cypress:run
