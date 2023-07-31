@@ -13,5 +13,8 @@ jobs:
           name: Installing dependencies
           command: yarn install --frozen-lockfile
       - run:
-          name: Run
-          command: yarn cypress:ci
+          name: Starting server
+          command: timeout 540 bash -c 'while [ $(curl -s -o /dev/null -w %{http_code} localhost:5173) != "200" ]; do sleep 15; done' || false
+      - run:
+          name: Running Cypress
+          command: yarn cypress:run
