@@ -14,8 +14,8 @@ jobs:
           command: yarn install --frozen-lockfile
       - run:
           name: Starting server
-          command: yarn cypress:run
-          backgroun: true
+          command: yarn start
+          background: true
       - run:
           name: Waiting server
           command: timeout 100 bash -c 'while [ $(curl -s -o /dev/null -w %{http_code} localhost:5173) != "200" ]; do sleep 15; done' || false
