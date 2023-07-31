@@ -12,5 +12,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
+          headless: false
+          headed: true
           start: yarn start
-          command: yarn cypress run --headed --browser chrome
