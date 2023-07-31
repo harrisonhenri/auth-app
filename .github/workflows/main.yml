@@ -15,4 +15,4 @@ jobs:
         with:
           start: yarn start
     env:
-      CYPRESS_VITE_API_URL: ${{secrets.CYPRESS_VITE_API_URL}}
+      VITE_API_URL: ${{secrets.VITE_API_URL}}
