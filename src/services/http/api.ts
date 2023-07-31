@@ -1,7 +1,7 @@
 import { BaseQueryFn, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import axios from 'axios'
 
-import { ServiceError } from '@models/service-error/service-error'
+import { ServiceError } from '@models/core/service-error/service-error'
 import { HTTP } from '@config/http'
 
 const { API_URL } = HTTP

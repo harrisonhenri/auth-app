@@ -1,20 +1,17 @@
+import { doLogin } from '../../support/utils'
+
 describe('Home', () => {
   beforeEach(function () {
-    cy.fixture('user.json').then(user => {
-      this.user = user
-    })
-
     cy.visit('/')
+
+    cy.fixture('user.json').then(user => {
+      const { username, password } = user
+      doLogin(username, password)
+      this.image = user.image
+    })
   })
 
   it('should be redirected to home if the user is logged in', function () {
-    const { username, password } = this.user
-
-    cy.get('[data-testid="username"]').type(username)
-    cy.get('[data-testid="password"]').type(password)
-
-    cy.get('button').click()
-
     cy.location().should(loc => expect(loc.pathname).to.eq('/home'))
 
     cy.visit('/')
@@ -23,24 +20,10 @@ describe('Home', () => {
   })
 
   it('should show the user avatar when the user is at home', function () {
-    const { username, password, image } = this.user
-
-    cy.get('[data-testid="username"]').type(username)
-    cy.get('[data-testid="password"]').type(password)
-
-    cy.get('button').click()
-
-    cy.get('img').should('have.attr', 'src', image)
+    cy.get('img').should('have.attr', 'src', this.image)
   })
 
   it('should show the navbar when the user clicks on it', function () {
-    const { username, password } = this.user
-
-    cy.get('[data-testid="username"]').type(username)
-    cy.get('[data-testid="password"]').type(password)
-
-    cy.get('button').click()
-
     cy.get('[data-testid="burguer-menu"]').click()
 
     cy.get('nav')
@@ -49,13 +32,6 @@ describe('Home', () => {
   })
 
   it('should sign out the user and clear the local storage', function () {
-    const { username, password } = this.user
-
-    cy.get('[data-testid="username"]').type(username)
-    cy.get('[data-testid="password"]').type(password)
-
-    cy.get('button').click()
-
     cy.get('[data-testid="burguer-menu"]').click()
 
     cy.get('[data-testid="sign-out-button"]').click()

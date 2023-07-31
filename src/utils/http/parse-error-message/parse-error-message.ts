@@ -1,4 +1,4 @@
-import { ServiceError } from '@models/service-error/service-error'
+import { ServiceError } from '@models/core/service-error/service-error'
 import { SerializedError } from '@reduxjs/toolkit'
 import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query'
 

@@ -1,5 +1,7 @@
 # Auth App
 
+[![E2E Tests](https://github.com/harrisonhenri/auth-app/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/harrisonhenri/auth-app/actions/workflows/main.yml/badge.svg?branch=master)
+
 Welcome to the Auth App!!
 
 ## Local installation and configuration

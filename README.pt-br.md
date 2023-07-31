@@ -1,6 +1,7 @@
 # Auth App
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/harrisonhenri/auth-app/README.md)
+[![Testes E2E](https://github.com/harrisonhenri/auth-app/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/harrisonhenri/auth-app/actions/workflows/main.yml/badge.svg?branch=master)
 
 Bem-vindo ao Auth App!!
 

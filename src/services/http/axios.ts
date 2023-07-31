@@ -8,7 +8,7 @@ import { AxiosError, AxiosRequestConfig } from 'axios'
 import { RootState } from '@store/store'
 
 import { isTokenExpired } from '@utils/http/is-token-expired/is-token-expired'
-import { ServiceError } from '@models/service-error/service-error'
+import { ServiceError } from '@models/core/service-error/service-error'
 import { signOut, updateSession } from '@slices/auth/auth.slice'
 import { api, baseQuery } from './api'
 

@@ -1,3 +1,5 @@
+import { doLogin } from '../../support/utils'
+
 describe('Auth', () => {
   beforeEach(function () {
     cy.fixture('user.json').then(user => {
@@ -10,10 +12,7 @@ describe('Auth', () => {
   it('should login successfully and go to home', function () {
     const { username, password } = this.user
 
-    cy.get('[data-testid="username"]').type(username)
-    cy.get('[data-testid="password"]').type(password)
-
-    cy.get('button').click()
+    doLogin(username, password)
 
     cy.location().should(loc => expect(loc.pathname).to.eq('/home'))
   })

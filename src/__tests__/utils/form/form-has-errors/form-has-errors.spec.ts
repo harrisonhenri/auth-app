@@ -1,5 +1,4 @@
 import { formHasErrors } from '@utils/form/form-has-errors/form-has-errors'
-import { vitest } from 'vitest'
 
 describe('formHasErrors', () => {
   function buildParameters() {
@@ -20,15 +19,7 @@ describe('formHasErrors', () => {
     ]
   }
 
-  beforeEach(async () => {
-    vitest.useFakeTimers({
-      now: new Date('2023-07-30T19:01:00.000Z'),
-      shouldAdvanceTime: true,
-      toFake: ['Date'],
-    })
-  })
-
-  it('should check if the token is expired correctly', () => {
+  it('should check if there is any error in the errors object', () => {
     buildParameters().map(({ errorsObject, expected }) =>
       expect(formHasErrors(errorsObject)).toBe(expected),
     )
