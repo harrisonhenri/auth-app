@@ -1,4 +1,4 @@
-describe('Home', () => {
+describe('Auth', () => {
   beforeEach(function () {
     cy.fixture('user.json').then(user => {
       this.user = user
