@@ -1,11 +1,23 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@3
+  cypress: cypress-io/cypress@1
+executors:
+  with-chrome:
+    resource_class: large
+    docker:
+      - image: 'cypress/browsers:node16.18.0-chrome90-ff88'
 workflows:
   build:
     jobs:
+      - cypress/install
       - cypress/run:
-          package-manager: yarn
-          start-command: yarn start
-          wait-on: http://localhost:5173
-          cypress-command: yarn cypress:run
+          requires:
+            - cypress/install
+          executor: with-chrome
+          browser: chrome
+          post-steps:
+            - run: ls
+            - store_test_results:
+                path: cypress/results
+            - store_artifacts:
+                path: cypress/screenshots
