@@ -45,11 +45,11 @@ For more information about the commit message pattern, please visit the [Convent
 │   ├── components                  <- Directory that contains some global components (components shared along the project)
 │   ├── config                      <- Directory that contains some configurations usually based on env vars
 │   ├── features                    <- Shared modules
-│   ├── hooks                       <- Shared hooks
 │   │   ├── app
 │   │       ├── utils               <- It contains some local utils
 │   │       ├── components          <- It contains some local components
 │   │   ├── slices                  <- Directory containing the slices of feature (following Redux Rtk pattern)
+│   ├── hooks                       <- Shared hooks
 │   ├── model                       <- Directory that contains the domain of the app
 │   ├── routes                      <- Directory that contains the routes of the app
 │   │   ├── private-route.tsx       <- Private router wrapper

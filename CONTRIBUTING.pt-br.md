@@ -51,6 +51,7 @@ Para mais informações, por favor visite o [site do Conventional Commits](https
 │   │       ├── utils               <- Contém alguns utils locais
 │   │       ├── components          <- Contém alguns componentes locais
 │   │   ├── slices                  <- Diretório contendo os slices das features (seguindo o padrão do Redux Rtk)
+│   ├── hooks                       <- Módulo contendo os hooks da app
 │   ├── model                       <- Diretório que contém o domínio da app
 │   ├── routes                      <- Diretório que contém as rotas da app
 │   │   ├── private-route.tsx       <- Wrapper para rotas privadas
