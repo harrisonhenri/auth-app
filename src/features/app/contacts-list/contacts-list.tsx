@@ -7,6 +7,7 @@ import { Contacts } from './components/Contacts/contacts'
 import { SnackBar } from '@components/Snackbar/snack-bar'
 import { parseErrorMessage } from '@utils/http/parse-error-message/parse-error-message'
 import { useSearchContacts } from '@hooks/use-search-contacts/use-search-contacts'
+import styles from './contacts-list.module.scss'
 
 export const ContactsList = () => {
   const dispatch = useAppDispatch()
@@ -26,7 +27,7 @@ export const ContactsList = () => {
   }
 
   return (
-    <>
+    <div className={styles.container}>
       <h4>Contatos</h4>
       <Autocomplete
         handleInputChange={handleUserNameChange}
@@ -47,6 +48,6 @@ export const ContactsList = () => {
           open={Boolean(searchingContactError)}
         />
       )}
-    </>
+    </div>
   )
 }

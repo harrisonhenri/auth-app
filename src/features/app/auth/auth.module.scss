@@ -3,10 +3,21 @@
   flex-direction: column;
   align-items: center;
 
+  h4 {
+    margin-top: var(--space__bravo);
+
+    color: var(--black__light);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   .form {
     display: flex;
     flex-direction: column;
-    align-self: center;
+
+    svg {
+      align-self: center;
+    }
 
     margin-top: var(--space__zulu);
     border-radius: var(--border__bravo);

@@ -2,6 +2,7 @@
 
 .container {
   border-radius: var(--border__bravo);
+  height: 100%;
   padding: var(--space__bravo);
 
   box-shadow: rgb(0 0 0 / 10%) 0 10px 15px -3px;
@@ -9,7 +10,6 @@
 
   article {
     display: flex;
-    justify-content: space-between;
     width: 100%;
 
     margin: var(--space__bravo) 0;
@@ -20,6 +20,7 @@
     }
 
     p {
+      margin-left: var(--space__bravo);
       color: var(--secondary);
       font-size: var(--fontsize__body);
     }
@@ -27,11 +28,7 @@
 
   .header {
     display: flex;
-    justify-content: space-between;
-
-    p {
-      text-transform: uppercase;
-    }
+    justify-content: flex-end;
 
     svg {
       outline: none;
@@ -41,14 +38,14 @@
       background: transparent;
 
       font-size: var(--fontsize__h6);
-      color: var(--secondary);
+      color: var(--primary__dark);
     }
   }
 }
 
 @include responsiviness-down(smartphone) {
   p {
-    max-width: 15rem;
+    max-width: 18rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

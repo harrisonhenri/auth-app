@@ -35,10 +35,11 @@
   }
 
   &:focus-within {
-    border-color: var(--primary__light);
+    border-color: var(--primary);
 
     label {
       transform: scale(0.8) translate(-0.5rem, -3rem);
+      color: var(--primary);
     }
   }
 
@@ -59,7 +60,7 @@
     left: 0.5rem;
 
     color: var(--error);
-    font-size: var(--fontsize__caption);
+    font-size: var(--fontsize__body);
     font-weight: 700;
   }
 }

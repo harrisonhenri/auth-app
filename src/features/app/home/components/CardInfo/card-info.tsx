@@ -10,21 +10,19 @@ type IData =
 
 interface Props {
   data: IData
-  title: string
   iconName: 'user' | 'wallet' | 'health' | 'job'
 }
 
-export const CardInfo = ({ data, title, iconName }: Props) => {
+export const CardInfo = ({ data, iconName }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <p>{title}</p>
         <CardIcon name={iconName} />
       </div>
       <div>
         {data.map(({ label, value }) => (
           <article key={label}>
-            <strong>{label}</strong>
+            <strong>{label}:</strong>
             <p>{value}</p>
           </article>
         ))}

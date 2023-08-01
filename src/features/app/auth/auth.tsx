@@ -10,6 +10,7 @@ import { formHasErrors } from '@utils/form/form-has-errors/form-has-errors'
 import { useState } from 'react'
 import { ButtonContent } from '@components/ButtonContent/button-content'
 import { SnackBar } from '@components/Snackbar/snack-bar'
+import { Logo } from '@components/Logo/logo'
 
 export const Auth = () => {
   const {
@@ -35,7 +36,8 @@ export const Auth = () => {
   return (
     <section className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <h4>Login</h4>
+        <Logo />
+        <h4>User Login</h4>
         <Input
           type="text"
           {...register('username')}

@@ -32,7 +32,8 @@ Recomenda-se o uso do padrão BEM.
 Esse projeto foi construído utilizando-se o [dummy json](https://dummyjson.com/) como backend seguindo as hipóteses abaixo:
 
 - Esta API não possui um refreshToken (e aparentemente que o token não é validado), então, [esse snippet](https://github.com/harrisonhenri/auth-app/blob/master/src/services/http/axios.ts#L39) tenta simular esse fluxo
-- Aparentemente esta api não retorna os dados dos usuários com base no token, portanto, o aplicativo obtém os dados do usuário com uma solicitação get http usando o id como parâmetro de rota [conforme apresentado aqui](https://github.com/harrisonhenri/auth-app/blob/master/src/features/slices/user-info/user-info.api.ts#L8). Idealmente, essa consulta não seria necessária (a api já poderia retornar todo o perfil do usuário no login) ou feita apenas usando a sessão do usuário (sem o id).
+- Aparentemente esta api não retorna os dados dos usuários com base no token, portanto, o aplicativo obtém os dados do usuário com uma solicitação get http usando o id como parâmetro de rota [conforme apresentado aqui](https://github.com/harrisonhenri/auth-app/blob/master/src/features/slices/user-info/user-info.api.ts#L8). Idealmente, essa consulta não seria necessária (a api já poderia retornar todo o perfil do usuário no login) ou feita apenas usando a sessão do usuário (sem o id)
+- O ambiente de desenvolvimento inicializa com alguns dados mockados [conforme apresentado aqui](https://github.com/harrisonhenri/auth-app/blob/master/src/features/slices/contacts-list/contacts-list.slice.ts#L11).
 
 ### Git patterns
 

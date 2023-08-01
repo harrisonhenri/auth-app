@@ -5,7 +5,7 @@
 
   .content__container {
     display: grid;
-    gap: 1rem;
+    gap: var(--space__bravo);
     grid-template-columns: 1fr;
 
     margin: var(--space__bravo);

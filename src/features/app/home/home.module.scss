@@ -7,18 +7,26 @@
 }
 
 .container {
+  margin: var(--space__bravo) 0;
+}
+
+.content__container {
   animation: linear;
   animation-name: fade-in;
   animation-duration: 300ms;
   animation-timing-function: ease-in;
 }
 
-.content__container {
+.content {
   display: grid;
-  gap: 1rem;
+  gap: var(--space__delta);
   grid-template-areas: 'personal_info' 'physical_info' 'financial_info' 'job_info';
 
   margin-top: var(--space__bravo);
+
+  h6 {
+    color: var(--black__light);
+  }
 
   .personal--info {
     grid-area: personal_info;
@@ -48,7 +56,7 @@
 }
 
 @include responsiviness-up(desktop) {
-  .content__container {
+  .content {
     grid-template-areas: 'personal_info financial_info' 'personal_info physical_info' 'job_info job_info';
   }
 }

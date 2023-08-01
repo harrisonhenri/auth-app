@@ -5,8 +5,11 @@
   flex-direction: row;
 
   .content {
-    padding: var(--space__charlie);
+    overflow-y: auto;
+    height: 100%;
     width: 100%;
+    padding: var(--space__charlie);
+
     background-color: var(--background);
   }
 }

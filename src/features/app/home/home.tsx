@@ -26,43 +26,31 @@ export const Home = () => {
     )
 
   return (
-    <>
+    <div className={styles.container}>
       <h4>Home</h4>
       {user && (
-        <div className={user ? styles.container : ''}>
+        <div className={user ? styles.content__container : ''}>
           <GeneralInfo
             image={user.image}
             fullName={user.fullName}
             maidenName={user.maidenName}
           />
-          <div className={styles.content__container}>
+          <div className={styles.content}>
             <div className={styles['personal--info']}>
-              <CardInfo
-                iconName="user"
-                data={user.personalInfo}
-                title="Informações pessoais"
-              />
+              <h6>Informações pessoais</h6>
+              <CardInfo iconName="user" data={user.personalInfo} />
             </div>
             <div className={styles['financial--info']}>
-              <CardInfo
-                iconName="wallet"
-                data={user.financialInfo}
-                title="Informações financeiras"
-              />
+              <h6>Informações financeiras</h6>
+              <CardInfo iconName="wallet" data={user.financialInfo} />
             </div>
             <div className={styles['physical--info']}>
-              <CardInfo
-                iconName="health"
-                data={user.physicalInfo}
-                title="Características físicas"
-              />
+              <h6>Características físicas</h6>
+              <CardInfo iconName="health" data={user.physicalInfo} />
             </div>
             <div className={styles['job--info']}>
-              <CardInfo
-                iconName="job"
-                data={user.jobInfo}
-                title="Informações de trabalho"
-              />
+              <h6>Informações de trabalho</h6>
+              <CardInfo iconName="job" data={user.jobInfo} />
             </div>
           </div>
         </div>
@@ -74,6 +62,6 @@ export const Home = () => {
           open={Boolean(gettingUserInfoError)}
         />
       )}
-    </>
+    </div>
   )
 }

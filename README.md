@@ -27,7 +27,7 @@ yarn start
 ````=sh
 username kminchelle
 password 0lelplR
-```x
+```
 
 ## Testing
 

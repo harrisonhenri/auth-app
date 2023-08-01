@@ -1,18 +1,19 @@
 :root {
   --white: #fafafa;
   --black: #000;
+  --black__light: rgb(0 0 0 / 50%);
 
   --background: #f2f2f2;
   --disabled__light: #ccc;
   --disabled: #666;
 
-  --primary: #ffb3c7;
-  --primary__dark: #ff80a9;
-  --primary__light: #ffe1e9;
+  --primary: #00be28;
+  --primary__dark: #2d3234;
+  --primary__light: #00ff01;
 
-  --secondary: #6366f1;
-  --secondary__dark: #1c2536;
-  --secondary__light: #cac9fa;
+  --secondary: #ff7f10;
+  --secondary__dark: #e84c02;
+  --secondary__light: #ffb403;
 
   --error: #d32f2f;
   --success: #009e20;

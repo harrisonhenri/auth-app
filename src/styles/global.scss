@@ -67,7 +67,7 @@ button {
 body,
 main,
 section {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 @include responsiviness-up(xm) {
