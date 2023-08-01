@@ -18,6 +18,12 @@ export const contactsListSlice = createSlice({
         newContact: IContact
       }>,
     ) {
+      const index = state.contactsList.findIndex(
+        item => item.id === payload.newContact.id,
+      )
+
+      if (index >= 0) return
+
       state.contactsList.push(payload.newContact)
     },
     removeContact(state, { payload }: PayloadAction<{ contactId: number }>) {

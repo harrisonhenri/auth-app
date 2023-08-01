@@ -40,7 +40,9 @@ describe('contactsListSlice', () => {
     ).toBe(0)
   })
 
-  it('should add a contact successfully', () => {
+  it('should add a contact successfully once', () => {
+    store.dispatch(addContact({ newContact }))
+    store.dispatch(addContact({ newContact }))
     store.dispatch(addContact({ newContact }))
 
     expect(

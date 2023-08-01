@@ -1,11 +1,12 @@
 @import '../../styles/mixins';
 
 nav {
+  z-index: 1;
   display: flex;
   flex-direction: column;
 
   width: 18rem;
-  min-height: 100vh;
+  height: 100vh;
   padding: var(--space__bravo);
 
   background-color: var(--secondary);
@@ -63,6 +64,12 @@ nav {
   }
 }
 
+@include responsiviness-down(smartphone) {
+  nav {
+    width: 40%;
+  }
+}
+
 @include responsiviness-down(desktop) {
   .burger {
     display: flex;
@@ -70,7 +77,6 @@ nav {
   }
 
   nav {
-    width: 30%;
     min-width: 10rem;
 
     &[data-status='hide'] {

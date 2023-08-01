@@ -15,6 +15,7 @@ export const Navbar = ({ visible, toogleVisibility }: Props) => {
   const navigate = useNavigate()
 
   function handleNavigation(path: string) {
+    toogleVisibility()
     navigate(path)
   }
 
