@@ -16,9 +16,5 @@ jobs:
           start: yarn start
     env:
       VITE_API_URL: ${{secrets.VITE_API_URL}}
-      - name: Upload screenshots
-        uses: actions/upload-artifact@latest
-        if: failure()
-        with:
-            name: cypress-snapshots
-            path: cypress/snapshots
+      VITE_SEARCH_DEBOUNCE_IN_SECONDS: ${{secrets.VITE_API_URL}}
+      VITE_SEARCH_MINIMUM_CHARACTERS: ${{secrets.VITE_SEARCH_MINIMUM_CHARACTERS}}
