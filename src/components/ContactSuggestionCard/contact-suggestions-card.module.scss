@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid var(--disabled__light);
+  padding: var(--space__bravo);
+
+  img {
+    width: 4rem;
+    height: auto;
+  }
+
+  .content__container {
+    display: flex;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      margin-left: var(--space__alpha);
+
+      strong {
+        color: var(--primary__dark);
+        font-size: var(--fontsize__body);
+      }
+
+      p {
+        color: var(--secondary);
+        font-size: var(--fontsize__body);
+      }
+    }
+  }
+
+  button {
+    svg {
+      color: var(--secondary);
+      font-size: var(--fontsize__h4);
+    }
+  }
+}

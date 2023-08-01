@@ -34,16 +34,23 @@ export const Navbar = ({ visible, toogleVisibility }: Props) => {
       </button>
       <nav data-status={visible ? 'show' : 'hide'}>
         {visible && (
-          <button className={styles['navbar__hide']} onClick={toogleVisibility}>
+          <button
+            className={styles['burguer__button']}
+            onClick={toogleVisibility}
+          >
             <FaAngleLeft />
           </button>
         )}
         {pages
           .filter(item => item.isPrivate)
-          .map(({ path, Icon }) => (
-            <button key={path} onClick={() => handleNavigation(path)}>
+          .map(({ path, Icon, title }) => (
+            <button
+              data-testid={path}
+              key={path}
+              onClick={() => handleNavigation(path)}
+            >
               <Icon />
-              <span>Home</span>
+              <span>{title}</span>
             </button>
           ))}
 

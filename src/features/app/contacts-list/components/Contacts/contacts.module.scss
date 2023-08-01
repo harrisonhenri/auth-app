@@ -1,0 +1,94 @@
+@import '../../../../../styles/mixins';
+
+.container {
+  margin-top: var(--space__zulu);
+
+  .content__container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+
+    margin: var(--space__bravo);
+
+    .item {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      border-radius: var(--border__bravo);
+      border: 2px solid var(--disabled__light);
+      box-shadow: rgb(0 0 0 / 10%) 0 10px 15px -3px;
+      min-width: 24rem;
+      padding: var(--space__bravo);
+
+      button {
+        position: absolute;
+        top: var(--space__alpha);
+        right: var(--space__bravo);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 2rem;
+        height: 2rem;
+
+        &:hover {
+          border-radius: 50%;
+
+          opacity: 0.7;
+          transition: opacity 200ms ease;
+
+          background-color: var(--disabled__light);
+        }
+      }
+
+      img {
+        border-radius: 50%;
+        border: 2px solid var(--disabled__light);
+        width: 100%;
+        height: auto;
+        max-width: 8rem;
+
+        box-shadow: rgb(0 0 0 / 10%) 0 10px 15px -3px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .item__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        margin-left: var(--space__bravo);
+        height: 100%;
+
+        div {
+          display: flex;
+
+          svg {
+            font-size: var(--fontsize__body);
+          }
+
+          p {
+            margin-left: var(--space__bravo);
+            max-width: 14rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            color: var(--secondary);
+            font-size: var(--fontsize__body);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsiviness-up(smartphone) {
+  .container {
+    .content__container {
+      grid-template-columns: repeat(2, 1fr);
+      margin: var(--space__bravo);
+    }
+  }
+}

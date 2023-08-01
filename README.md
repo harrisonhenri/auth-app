@@ -30,6 +30,14 @@ To run the tests just type
 yarn test
 ```
 
+## E2E
+
+To run the e2e tests just type (this tests run in github actions)
+
+```=sh
+yarn cypress:run
+```
+
 ## Build
 
 To build:

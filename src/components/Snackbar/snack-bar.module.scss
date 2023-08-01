@@ -15,6 +15,21 @@
   visibility: hidden;
   opacity: 0;
 
+  &.open {
+    animation: linear;
+    animation-name: fade-in;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+  }
+
+  &.success {
+    background-color: var(--success);
+  }
+
+  &.error {
+    background-color: var(--error);
+  }
+
   p,
   svg {
     color: var(--white);
@@ -25,21 +40,6 @@
   svg {
     font-size: var(--fontsize__h6);
   }
-}
-
-.container.open {
-  animation: linear;
-  animation-name: fade-in;
-  animation-duration: 4s;
-  animation-timing-function: ease-in;
-}
-
-.container.success {
-  background-color: var(--success);
-}
-
-.container.error {
-  background-color: var(--error);
 }
 
 @include responsiviness-down(smartphone) {

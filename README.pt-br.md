@@ -31,6 +31,14 @@ Para executar os testes digite
 yarn test
 ```
 
+## Testes E2E
+
+Para executar os testes E2E digite (esses testes rodam em uma pipeline do Github Actions)
+
+```=sh
+yarn cypress:run
+```
+
 ## Build
 
 E para buildar o projeto

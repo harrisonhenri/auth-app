@@ -12,21 +12,25 @@ The files should be named using the kebab case pattern.
 
 ### Import/export
 
-Its recommended to used named exports.
+It's recommended to used named exports.
 
 ### Components
 
-Its recommended:
+It's recommended:
 
 - To write functional components (using const)
 - To isolate side effects in hooks
+
+### Styles
+
+It's recommended to use the BEM pattern.
 
 ## Hypothesis
 
 This project was built [dummy json](https://dummyjson.com/) as a backend follow the hypotheses below:
 
-- This api does not have a refreshToken (and it seams the token is not validated), so, [this snippet](https://github.com/harrisonhenri/auth-app/blob/master/src/services/http/axios.ts#L39) tries to simulate that
-- It seamns that this api does not return the users data based on the token, so, the app gets the user's data with a get http request using the id as route parameter [as shown here](https://github.com/harrisonhenri/auth-app/blob/master/src/features/slices/user-info/user-info.api.ts#L8). Ideally, this query wouldn't be necessary (the api could already return the entire user's profile on sign in) or done only using the user's session (without the id).
+- This api does not have a refreshToken (and it seems the token is not validated), so, [this snippet](https://github.com/harrisonhenri/auth-app/blob/master/src/services/http/axios.ts#L39) tries to simulate that
+- It seems that this api does not return the users data based on the token, so, the app gets the user's data with a get http request using the id as route parameter [as shown here](https://github.com/harrisonhenri/auth-app/blob/master/src/features/slices/user-info/user-info.api.ts#L8). Ideally, this query wouldn't be necessary (the api could already return the entire user's profile on sign in) or done only using the user's session (without the id).
 
 ### Git patterns
 
@@ -40,6 +44,7 @@ For more information about the commit message pattern, please visit the [Convent
 │   ├── components                  <- Directory that contains some global components (components shared along the project)
 │   ├── config                      <- Directory that contains some configurations usually based on env vars
 │   ├── features                    <- Shared modules
+│   ├── hooks                       <- Shared hooks
 │   │   ├── app
 │   │       ├── utils               <- It contains some local utils
 │   │       ├── components          <- It contains some local components

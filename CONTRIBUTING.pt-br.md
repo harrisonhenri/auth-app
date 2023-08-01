@@ -16,14 +16,18 @@ Os arquivos devem ser nomeados usando o padrão kebab case.
 
 É recomendado usar exports nomeados.
 
-### Components
+### Componentes
 
 É recomendado:
 
 - Utilizar componentes funcionais (usando const)
 - Isolar efeitos colateirais em hooks
 
-## Hypothesis
+### Estilos
+
+Recomenda-se o uso do padrão BEM.
+
+## Hipóteses
 
 Esse projeto foi construído utilizando-se o [dummy json](https://dummyjson.com/) como backend seguindo as hipóteses abaixo:
 
@@ -34,7 +38,7 @@ Esse projeto foi construído utilizando-se o [dummy json](https://dummyjson.com/
 
 Para mais informações, por favor visite o [site do Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-## 📚 Project Organization
+## 📚 Organização do projeto
 
 ```
 ├── src

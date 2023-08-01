@@ -27,6 +27,7 @@ export default defineConfig({
       '@store': path.join(__dirname, 'src/store'),
       '@app': path.join(__dirname, 'src/features/app'),
       '@slices': path.join(__dirname, 'src/features/slices'),
+      '@hooks': path.join(__dirname, 'src/hooks'),
       '@routes': path.join(__dirname, 'src/routes'),
       '@services': path.join(__dirname, 'src/services'),
       '@models': path.join(__dirname, 'src/models'),

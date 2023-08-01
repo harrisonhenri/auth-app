@@ -28,7 +28,7 @@ describe('Home', () => {
 
     cy.get('nav')
       .children()
-      .should(children => expect(children.length).eq(3))
+      .should(children => expect(children.length).eq(4))
   })
 
   it('should sign out the user and clear the local storage', function () {
@@ -40,6 +40,7 @@ describe('Home', () => {
     cy.window().should(window =>
       expect(JSON.parse(window.localStorage.getItem('persist:root'))).deep.eq({
         authSlice: '{}',
+        contactsListSlice: '{"contactsList":[]}',
         _persist: '{"version":-1,"rehydrated":true}',
       }),
     )
