@@ -4,6 +4,6 @@ export default defineConfig({
   e2e: {
     video: false,
     screenshotOnRunFailure: false,
-    baseUrl: 'http://localhost:5174',
+    baseUrl: 'http://localhost:5173',
   },
 })
