@@ -22,13 +22,20 @@ yarn install --frozen-lockfile
 yarn start
 ```
 
+4. And, finally, you can use one the [dummy users](https://dummyjson.com/users) to access the system:
+
+````=sh
+username kminchelle
+password 0lelplR
+```x
+
 ## Testing
 
 To run the tests just type
 
 ```=sh
 yarn test
-```
+````
 
 ## E2E
 
