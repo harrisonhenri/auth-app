@@ -19,7 +19,7 @@
 
 .content {
   display: grid;
-  gap: var(--space__delta);
+  gap: var(--space__echo);
   grid-template-areas: 'personal_info' 'physical_info' 'financial_info' 'job_info';
 
   margin-top: var(--space__bravo);
