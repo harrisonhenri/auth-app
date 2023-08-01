@@ -38,7 +38,7 @@ const mockedContactsList = {
 }
 
 const initialState: IContactsList.FormattedResponse =
-  ENV !== 'DEVELOPMENT' ? { contactsList: [] } : mockedContactsList
+  ENV === 'DEVELOPMENT' ? mockedContactsList : { contactsList: [] }
 
 export const contactsListSlice = createSlice({
   name: 'contactsListSlice',

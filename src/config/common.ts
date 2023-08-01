@@ -7,3 +7,5 @@ export const COMMON = {
     import.meta.env.VITE_SEARCH_MINIMUM_CHARACTERS,
   ),
 }
+
+console.log(import.meta.env)
