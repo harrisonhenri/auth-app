@@ -11,13 +11,13 @@ Para instalar e executar o projeto localmente, primeiro adicione um arquivo .env
 
 1. Instale o node (pelo menos a versão mínima do package.json) do [site do node](https://nodejs.org/en/download/).
 
-2. Instale as dependências com
+2. Instale as dependências com:
 
 ```=sh
 yarn install --frozen-lockfile
 ```
 
-3. E execute o projeto com
+3. Execute o projeto com:
 
 ```=sh
 yarn start
@@ -32,7 +32,7 @@ password 0lelplR
 
 ## Testes
 
-Para executar os testes digite
+Para executar os testes digite:
 
 ```=sh
 yarn test
@@ -40,7 +40,7 @@ yarn test
 
 ## Testes E2E
 
-Para executar os testes E2E digite (esses testes rodam em uma pipeline do Github Actions)
+Para executar os testes E2E digite (esses testes rodam em uma pipeline do Github Actions):
 
 ```=sh
 yarn cypress:run
@@ -61,7 +61,7 @@ yarn build
 - [Editor Config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-## Build with
+## Built with
 
 <div>
 <img align="left" alt="ReactJs" width="68px" style="margin-left:1em" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />

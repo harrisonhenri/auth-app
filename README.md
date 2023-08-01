@@ -10,26 +10,34 @@ To install and run the project locally, first, add a .env file (based on the .en
 
 1. Install the node (minimum version of the package.json at least) from [node site](https://nodejs.org/en/download/).
 
-2. Install the dependencies with
+2. Install the dependencies with:
 
 ```=sh
 yarn install --frozen-lockfile
 ```
 
-3. And run with
+3. Run with:
 
 ```=sh
 yarn start
 ```
 
-4. And, finally, you can use one the [dummy users](https://dummyjson.com/users) to access the system:
+4. And finally you can use one the [dummy users](https://dummyjson.com/users) to access the system:
 
 ```=sh
 username kminchelle
 password 0lelplR
 ```
 
-## E2E
+## Tests
+
+To run the tests just type:
+
+```=sh
+yarn test
+```
+
+## E2E Tests
 
 To run the e2e tests just type (this tests run in github actions)
 
@@ -52,7 +60,7 @@ yarn build
 - [Editor Config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-## Build with
+## Built with
 
 <div>
 <img align="left" alt="ReactJs" width="68px" style="margin-left:1em" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" />
