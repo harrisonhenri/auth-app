@@ -24,18 +24,10 @@ yarn start
 
 4. And, finally, you can use one the [dummy users](https://dummyjson.com/users) to access the system:
 
-````=sh
+```=sh
 username kminchelle
 password 0lelplR
 ```
-
-## Testing
-
-To run the tests just type
-
-```=sh
-yarn test
-````
 
 ## E2E
 
