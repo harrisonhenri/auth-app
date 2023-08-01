@@ -10,7 +10,7 @@
     "start": "vite",
     "build": "tsc && vite build",
     "test": "VITE_ENV=TEST vitest",
-    "test:coverage": "vitest --coverage",
+    "test:coverage": "vitest run --coverage",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && prettier src && stylelint './src/**/*.scss'",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --fix && stylelint './src/**/*.scss' --fix",
     "preview": "vite preview",
