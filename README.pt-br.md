@@ -23,9 +23,9 @@ yarn install --frozen-lockfile
 yarn start
 ```
 
-4. E você pode usar um desses [usuário](https://dummyjson.com/users) para acessar o sistema:
+4. E você pode usar um desses [usuários](https://dummyjson.com/users) para acessar o sistema:
 
-````=sh
+```=sh
 username kminchelle
 password 0lelplR
 ```
